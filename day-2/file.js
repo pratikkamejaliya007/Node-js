@@ -33,3 +33,9 @@ fs.appendFile("hy.html", "hello.txt", (err) => {
   }
 
   createfile()
+
+  // fs.writeFileSync("index.html","created html file");
+
+  let z=fs.readFileSync("index.html")
+
+  console.log(z.toString())
