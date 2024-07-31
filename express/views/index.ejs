@@ -98,6 +98,7 @@
                 <th>ID</th>
                 <th>NAME</th>
                 <th>ACTION</th>
+                <th>EDIT</th>
             </tr>
         </thead>
         <tbody>
@@ -106,6 +107,7 @@
                     <td><%= el.id %></td>
                     <td><%= el.name %></td>
                     <td><a href="/deleteData?userid=<%= el.id %>">delete</a></td>
+                    <td><a href="/edit?userid=<%= el.id %>">Edit</a></td>
                 </tr>
             <% }) %>
         </tbody>
