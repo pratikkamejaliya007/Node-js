@@ -17,7 +17,7 @@ var studentData = [
 
 app.set("view engine", "ejs");
 
-app.get("/", (req, res) => {
+app.get("/show", (req, res) => {
     res.render("index", {
         student: studentData
     });
