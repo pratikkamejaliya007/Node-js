@@ -3,11 +3,11 @@ const mongoose=require("mongoose");
 const User=mongoose.Schema({
     name : {
         type : String,
-        require : true
+        required : true
     },
     subject : {
         type : String,
-        require : true
+        required : true
     }
 },{timestamps : true});
 

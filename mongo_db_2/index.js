@@ -5,8 +5,6 @@ const cors = require("cors");
 
 const datarouter = require("./route/data.route");
 
-// const userrouter = require("./route/user.route")
-
 const port = 4040;
 
 const app = express();
