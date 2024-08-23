@@ -97,11 +97,11 @@ app.post("/updatedata",(req,res)=>{
     res.render("home")
  })
 
- app.get("/admin",(req,res)=>{
+ app.get("/admin",middleware,(req,res)=>{
     res.render("admin")
  })
 
-app.get("/register",(req,res)=>{
+app.get("/register",middleware,(req,res)=>{
     res.render("register")
 })
 

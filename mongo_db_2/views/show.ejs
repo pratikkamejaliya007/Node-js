@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Example</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mx-auto mt-10">
+        <table class="min-w-full bg-white border border-gray-300">
+            <thead>
+                <tr>
+                    <th class="px-6 py-3 text-left bg-gray-200 text-gray-600 font-bold uppercase 
+                    text-sm">ID</th>
+                    <th class="px-6 py-3 text-left bg-gray-200 text-gray-600 font-bold uppercase text-sm">Name</th>
+                    <th class="px-6 py-3 text-left bg-gray-200 text-gray-600 font-bold uppercase text-sm">Subject</th>
+                    <th class="px-6 py-3 text-left bg-gray-200 text-gray-600 font-bold uppercase text-sm">Actions</th>
+                </tr>
+            </thead>            
+            <tbody>
+                <% data.map((el,i)=>{ %>
+                    <tr class="border-b border-gray-200">
+                        <td  class="px-6 py-4 text-sm text-gray-700"><%= i+1 %></td>
+                        <td  class="px-6 py-4 text-sm text-gray-700"><%= el.name %></td>
+                        <td  class="px-6 py-4 text-sm text-gray-700"><%= el.subject %></td>
+                        <td  class="px-6 py-4 text-sm text-gray-700">
+                            <a class="text-blue-500 hover:text-blue-700 mr-4" href="/update/<%= el.id %>">Update</a>
+                            <a href="/delete?id=<%= el.id %>" class="text-red-500 hover:text-red-700">Delete</a>
+                        </td>
+                    </tr>                    
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
